@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #14bae4;
+            
+        }
+
+        .login-container {
+            width: 350px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 14px;
+        }
+
+        .input-field label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        .input-field button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e8ba7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-container{
+            position: relative;
+            background-image: url('/image/login.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .select{
+            border-radius: 5px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="input-field">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="input-field">
+            <label for="user-type">User Type</label>
+            <select id="user-type">
+                <option>Select</option>
+                <option value="admin">Admin</option>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+                <option value="nurse">Nurse</option>
+            </select>
+        </div>
+        <div class="input-field">
+            <a href="#">Forgot password?</a>
+        </div>
+        <div class="input-field">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var userType = document.getElementById('user-type').value;
+
+            // Assuming redirect URLs for different user types
+            var redirectUrls = {
+                admin: 'admin.html',
+                doctor: 'doctor.html',
+                patient: 'patient.html',
+                nurse: 'nurse.html'
+            };
+
+            // Redirect based on selected user type
+            if (redirectUrls[userType]) {
+                window.location.href = redirectUrls[userType];
+            }
+            else {
+                alert('Invalid user type');
+            }
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,25 +9,15 @@
 <body>
   <div class="admin-container">
     <header>
-      <!-- <div class="header-content"> -->
-        <!-- <h1>Welcome Admin</h1> -->
+    
         <div class="cover-photo">
             <img src="/image/admin1.jpg" alt="Cover Photo">
             <button id="logoutBtn">Logout</button>
           </div> 
-        
-      <!-- </div> -->
     </header>
     <div class="cover-photo">
       <img src="/iamge/admin1.png" alt="Cover Photo">
     </div>
-    <!-- <div class="sidebar">
-      <button id="sidebarToggleBtn">Toggle Sidebar</button>
-      <ul>
-        <li>Option 1</li>
-        <li>Option 2</li>
-        <li>Option 3</li>
-        <li>Option 4</li> -->
         <aside>
             <p> Menu </p>
             <a href="javascript:void(0)">
@@ -51,14 +41,174 @@
               Trash
             </a>
           </aside>
-          
-          <!-- <div class="social">
-            <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
-              <i class="fa fa-linkedin"></i>
-            </a>
-          </div> -->
+        
           <script src="script.js"></script>
         
       </ul>
     </div>
-  </div>
+  </div> -->
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    
+    <body>
+      <!-- <header>
+    
+        <div class="cover-photo">
+            <img src="/image/beach.jpg" alt="Cover Photo" height="220" width="300px">
+            <button id="logoutBtn">Logout</button>
+        </div> 
+        </header> -->
+    
+
+      <div class="custom-sidebar">
+  
+        <div class="sidebar-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </div>
+        
+        <div class="logo"></div>
+  
+        <div class="menu">
+          <div class="menu-title">Menu</div>
+  
+          <a href="#">
+            <div class="icon">
+              <img src="/image/doctor.svg" width="30" height="30">
+            </div>
+            <div class="label">Doctor</div>
+
+
+            <div class="container">
+              <h2>Doctor Form</h2>
+              <form id="doctorForm" class="form">
+                <div class="form-group">
+                  <label for="doctorId">Doctor ID:</label>
+                  <input type="text" id="doctorId" name="doctorId" required>
+                </div>
+                <div class="form-group">
+                  <label for="nid">NID:</label>
+                  <input type="text" id="nid" name="nid" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="doctorType">Doctor Type:</label>
+                  <input type="text" id="doctorType" name="doctorType" required>
+                </div>
+                <div class="form-group">
+                  <label for="description">Description:</label>
+                  <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="picture">Picture:</label>
+                  <input type="file" id="picture" name="picture" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactNumber">Contact Number:</label>
+                  <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-submit">Submit</button>
+                  <button type="button" class="btn btn-edit">Edit</button>
+                </div>
+              </form>
+            </div>
+            <script src="script.js"></script>
+          </a>
+  
+          <a href="#">
+            <div class="icon">
+              <img src="/image/nurse.svg" width="30" height="30">
+            </div>
+            <div class="label">Nurse</div>
+          </a>
+  
+          <a href="#">
+            <div class="icon">
+              <img src="/image/patient2.svg" width="30" height="30">
+            </div>
+            <div class="label">Patient</div>
+          </a>
+  
+          <a href="#">
+            <div class="icon">
+              <img src="/image/information.svg" width="30" height="30">
+            </div>
+            <div class="label">Information</div>
+          </a>
+        </div>
+  
+        <div class="menu">
+          <div class="menu-title">Links</div>
+          <a href="#">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                />
+              </svg>
+            </div>
+            <div class="label">Notifications</div>
+          </a>
+  
+          <a href="#">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+                />
+              </svg>
+            </div>
+            <div class="label">Statistics</div>
+          </a>
+        </div>
+      </div>
+  
+      <script src="script.js"></script>
+    </body>
+  </html>

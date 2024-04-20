@@ -1,52 +1,39 @@
-// document.getElementById('logoutBtn').addEventListener('click', function() {
-//     window.location.href = 'index.html'; // Redirect to login page
-//   });
-  
-//   document.getElementById('sidebarToggleBtn').addEventListener('click', function() {
-//     var sidebar = document.querySelector('.sidebar');
-//     if (sidebar.style.right === '-250px') {
-//       sidebar.style.right = '0';
-//     } else {
-//       sidebar.style.right = '-250px';
-//     }
-//   });
-  
+// const labels = document.querySelectorAll(".custom-sidebar .label");
 
-const labels = document.querySelectorAll(".custom-sidebar .label");
-
-labels.forEach((label, index) => {
-  label.style.transitionDelay = `${index * 50}ms`;
-});
+// labels.forEach((label, index) => {
+//   label.style.transitionDelay = `${index * 50}ms`;
+// });
 
 const sidebarBtn = document.querySelector(".custom-sidebar .sidebar-btn");
 const customSidebar = document.querySelector(".custom-sidebar");
-
+const divContainer = document.querySelector('#doctorForm');
 sidebarBtn.addEventListener("click", () => {
   customSidebar.classList.toggle("active");
+  
 });
+console.log("Experiment for showing or hiding123")
+
+function showDoctorForm() {
+  var doctorFormContainer = document.getElementById('doctorFormContainer');
+  console.log("Experiment for showing or hiding12344")
+  if (doctorFormContainer.style.display === 'none') {
+    doctorFormContainer.style.display = 'block';
+    console.log("Experiment for showing or hiding12345")
+  } 
+  else {
+    doctorFormContainer.style.display = 'none';
+    console.log("Experiment for showing or hiding12346")
+  }
+}
+
+function hideDoctorForm() {
+  var doctorFormContainer = document.getElementById('doctorFormContainer');
+  doctorFormContainer.style.display = 'none';
+  document.getElementById('cancelButton').addEventListener('click', hideDoctorForm);
+}
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const doctorForm = document.getElementById('doctorForm');
-
-  doctorForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Add your form submission logic here
-  });
-
-  const editButton = document.querySelector('.btn-edit');
-  editButton.addEventListener('click', function() {
-    // Add your edit button logic here
-  });
-});
-
-// function toggleForm() {
-//   var form = document.getElementById('doctorForm');
-//   form.style.display = (form.style.display === 'block') ? 'none' : 'block';
-// }
-
-document.getElementById('/image/doctor.svg').addEventListener('click', function() {
-  var container = document.getElementById('container');
-  container.style.display = (container.style.display === 'block') ? 'none' : 'block';
-});
+// Get references to the button and form elements
+// const toggleButton = document.getElementById('doctor');
+// const myForm = document.getElementById('form-container');
 
